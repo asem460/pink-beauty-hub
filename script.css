@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Beauty - Магазин косметики</title>
+    
+    <style>
+        /* Стили CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffccdd;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        /* Дополнительные стили */
+    </style>
+
+</head>
+<body>
+
+    <!-- HTML-контент -->
+    <header>
+        <div class="logo">Pink Beauty</div>
+        <nav>
+            <a onclick="showSection('home')">Главная</a>
+            <a onclick="showSection('catalog')">Каталог</a>
+            <a onclick="showSection('offers')">Акции</a>
+            <a onclick="showSection('contacts')">Контакты</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section id="home" class="section">
+            <h1>Главная страница</h1>
+        </section>
+        <!-- Другие секции -->
+    </div>
+
+    <footer>
+        <p>©️ 2025 Pink Beauty. Все права защищены.</p>
+    </footer>
+
+    <script>
+        /* JavaScript */
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => section.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
